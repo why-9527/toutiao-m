@@ -8,10 +8,18 @@ import '@/styles/index.less'
 
 // 引入vant组件
 import {
-    Button
+    Button,
+    Form,
+    Field,
+    NavBar,
+    Toast
 } from 'vant'
 
 Vue.use(Button)
+    .use(Form)
+    .use(Field)
+    .use(NavBar)
+    .use(Toast)
 
 Vue.config.productionTip = false
 
