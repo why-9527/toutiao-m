@@ -12,7 +12,8 @@ import {
     Form,
     Field,
     NavBar,
-    Toast
+    Toast,
+    CountDown
 } from 'vant'
 
 Vue.use(Button)
@@ -20,6 +21,7 @@ Vue.use(Button)
     .use(Field)
     .use(NavBar)
     .use(Toast)
+    .use(CountDown)
 
 Vue.config.productionTip = false
 
