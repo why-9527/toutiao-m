@@ -140,14 +140,14 @@ export default {
     font-size: 37px;
   }
 
-  .send-sms-btn {
-    width: 152px;
-    height: 46px;
-    line-height: 46px;
-    background-color: #ededed;
-    font-size: 22px;
-    color: #666;
-  }
+  //.send-sms-btn {
+  //  width: 152px;
+  //  height: 46px;
+  //  line-height: 46px;
+  //  background-color: #ededed;
+  //  font-size: 22px;
+  //  color: #666;
+  //}
 
   .login-btn-wrap {
     padding: 53px 33px;

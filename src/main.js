@@ -13,7 +13,9 @@ import {
     Field,
     NavBar,
     Toast,
-    CountDown
+    CountDown,
+    Tabbar,
+    TabbarItem
 } from 'vant'
 
 Vue.use(Button)
@@ -22,6 +24,8 @@ Vue.use(Button)
     .use(NavBar)
     .use(Toast)
     .use(CountDown)
+    .use(Tabbar)
+    .use(TabbarItem)
 
 Vue.config.productionTip = false
 
