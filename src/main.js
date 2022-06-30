@@ -15,7 +15,11 @@ import {
     Toast,
     CountDown,
     Tabbar,
-    TabbarItem
+    TabbarItem,
+    Icon,
+    Image,
+    Grid,
+    GridItem,
 } from 'vant'
 
 Vue.use(Button)
@@ -26,6 +30,11 @@ Vue.use(Button)
     .use(CountDown)
     .use(Tabbar)
     .use(TabbarItem)
+    .use(Icon)
+    .use(Image)
+    .use(Grid)
+    .use(GridItem)
+
 
 Vue.config.productionTip = false
 

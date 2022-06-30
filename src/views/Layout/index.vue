@@ -37,11 +37,11 @@ export default {
 .layout-container {
   .layout-tabbar {
     i.toutiao {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     span.text {
-      font-size: 16px;
+      font-size: 10px;
     }
   }
 }
