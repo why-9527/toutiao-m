@@ -1,12 +1,6 @@
 <template>
   <div class="my-container">
-    <div class="header not-login">
-      <div class="login-btn" @click="$router.push('/login')">
-        <img class="mobile-img" src="~@/assets/mobile.png" alt="">
-        <span class="text">登录 / 注册</span>
-      </div>
-    </div>
-    <div class="header user-info">
+    <div v-if="user" class="header user-info">
       <div class="base-info">
         <div class="left">
           <van-image round fit="cover" class="avatar" src="https://img.yzcdn.cn/vant/cat.jpeg"></van-image>
@@ -35,6 +29,12 @@
         </div>
       </div>
     </div>
+    <div v-else class="header not-login">
+      <div class="login-btn" @click="$router.push('/login')">
+        <img class="mobile-img" src="~@/assets/mobile.png" alt="">
+        <span class="text">登录 / 注册</span>
+      </div>
+    </div>
     <van-grid class="grid-nav" :column-num="2" clickable>
       <van-grid-item class="grid-item">
         <i slot="icon" class="toutiao toutiao-shoucang"></i>
@@ -45,15 +45,34 @@
         <span slot="text" class="text">历史</span>
       </van-grid-item>
     </van-grid>
+    <van-cell title="消息通知" is-link></van-cell>
+    <van-cell class="mb-9" title="小智同学" is-link></van-cell>
+    <van-cell clickable @click="onLogout" v-if="user" class="logout-cell" title="退出登录"></van-cell>
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
   name: 'index',
   data() {
     return {}
   },
+  computed: {
+    ...mapState(['user'])
+  },
+  methods: {
+    onLogout() {
+      this.$dialog.confirm({
+        title: '确认退出吗?'
+      }).then(() => {
+        this.$store.commit('setUser', null)
+      }).catch(() => {
+
+      })
+    }
+  }
 }
 </script>
 
@@ -161,6 +180,15 @@ export default {
         font-size: 14px;
       }
     }
+  }
+
+  .logout-cell {
+    text-align: center;
+    color: #d86262;
+  }
+
+  .mb-9 {
+    margin-bottom: 9px;
   }
 }
 </style>

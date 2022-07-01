@@ -20,6 +20,8 @@ import {
     Image,
     Grid,
     GridItem,
+    Cell,
+    Dialog,
 } from 'vant'
 
 Vue.use(Button)
@@ -34,7 +36,8 @@ Vue.use(Button)
     .use(Image)
     .use(Grid)
     .use(GridItem)
-
+    .use(Cell)
+    .use(Dialog)
 
 Vue.config.productionTip = false
 
